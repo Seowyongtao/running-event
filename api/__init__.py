@@ -7,3 +7,6 @@ app.register_blueprint(users_api_blueprint, url_prefix='/api/v1/users')
 
 from api.blueprints.login.views import login_api_blueprint
 app.register_blueprint(login_api_blueprint, url_prefix='/api/v1/auth')
+
+from api.blueprints.event.views import event_api_blueprint
+app.register_blueprint(event_api_blueprint, url_prefix='/api/v1/event')
