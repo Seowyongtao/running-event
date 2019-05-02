@@ -66,7 +66,7 @@ def new():
     if errors:
         return jsonify({"msg":{"Missing Parameters":[error for error in errors]}}), 400
     
-    registration = Registration(event_id=event_id, participant_id=user.id, registration_fee=registration_fee, first_name=first_name, last_name=last_name, email=email, address=address, date_of_birth=date_of_birth, age=age, gender=gender, nationality=nationality, nric=nric, phone_number=phone_number, address=address)
+    registration = Registration(event_id=event_id, participant_id=user.id, registration_fee=registration_fee, first_name=first_name, last_name=last_name, email=email, date_of_birth=date_of_birth, age=age, gender=gender, nationality=nationality, nric=nric, phone_number=phone_number, address=address)
 
     registration.save()
 
