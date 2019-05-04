@@ -89,3 +89,25 @@ def show_event():
             "description":event.description
         } for event in events]
     }), 200
+
+@event_api_blueprint.route('/show/<id>', methods=['GET'])
+@jwt_required
+def show_myevent(id):
+     
+    events = Event.select().where(Event.user_id==id)
+
+    return jsonify({
+        "status": "success",
+        "event": [{
+            "event_id":event.id,
+            "name":event.name,
+            "file_name":event.file_name,
+            "category":event.category,
+            "location":event.location,
+            "reward":event.reward,
+            "event_date":event.event_date,
+            "registration_fee":event.registration_fee,
+            "registration_closes":event.registration_closes,
+            "description":event.description
+        } for event in events]
+    }), 200
