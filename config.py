@@ -9,6 +9,7 @@ class Config(object):
         'SECRET_KEY') or os.urandom(32)
 
 
+
 class ProductionConfig(Config):
     DEBUG = False
     ASSETS_DEBUG = False

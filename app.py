@@ -10,7 +10,7 @@ from flask_jwt_extended import (
 web_dir = os.path.join(os.path.dirname(
     os.path.abspath(__file__)), 'instagram_web')
 
-app = Flask('NEXTAGRAM', root_path=web_dir)
+app = Flask('RUNa`Z', root_path=web_dir)
 
 app.config['JWT_SECRET_KEY'] = 'super-secret'  # Change this!
 jwt = JWTManager(app)

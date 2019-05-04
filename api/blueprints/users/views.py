@@ -7,6 +7,7 @@ from flask_jwt_extended import (
     jwt_required
 )
 
+
 users_api_blueprint = Blueprint('users_api',
                              __name__,
                              template_folder='templates')
@@ -36,17 +37,7 @@ def create():
         return jsonify({"msg": {"Missing parameters": [error for error in errors]}}), 400
     
         
-     # actual sign up users 
-   
-
-    # front_end side will do the validation
-    # pattern_password = '\w{6,}'
-    # result = re.search(pattern_password, user_password)
-    # pattern_email = '[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]'
-    # result_email = re.search(pattern_email,email)
-
     
-    # duplicate username and email checking
 
     username_check = User.get_or_none(User.username == username)
     email_check = User.get_or_none(User.email == email)
