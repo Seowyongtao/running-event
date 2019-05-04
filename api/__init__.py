@@ -14,3 +14,8 @@ app.register_blueprint(event_api_blueprint, url_prefix='/api/v1/event')
 from api.blueprints.registration.views import registration_api_blueprint
 app.register_blueprint(registration_api_blueprint, url_prefix='/api/v1/registration')
 
+from api.blueprints.payment.views import payment_api_blueprint
+app.register_blueprint(payment_api_blueprint, url_prefix='/api/v1/payment')
+
+
+
